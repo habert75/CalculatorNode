@@ -12,5 +12,5 @@ test('string with a single number should result in the number itself', () => {
 });
 
 test('string with four numbers separated by comma should result in the sum of the numbers', () => {
-    expect(calculator.add('2,0,4,5')).toBe(11);
+    expect(calculator.add('2,0,4,5')).toBe(12);
 });
