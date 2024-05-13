@@ -1,0 +1,24 @@
+name: Reusable workflow build
+
+on:
+  workflow_call:
+    # inputs:
+    #   config-path:
+    #     required: true
+    #     type: string
+    # secrets:
+    #   token:
+    #     required: true
+
+jobs:
+    buildCall:
+
+        runs-on: ubuntu-latest
+    
+        strategy:
+          matrix:
+            node-version: [14.x]
+            # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    
+        steps:
+        - run: echo "add code for deployment"
