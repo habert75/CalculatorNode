@@ -38,8 +38,8 @@ jobs:
     # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
-     - uses: ./.github/workflows/reusable-deploy.yml
-    #  - run: echo "add code for deployment"
+    #  - uses: ./.github/workflows/reusable-deploy.yml
+     - run: echo "add code for deployment"
       # - name: Download artifact
       #   uses: actions/download-artifact@v3
       #   with:
