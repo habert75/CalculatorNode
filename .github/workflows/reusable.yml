@@ -11,10 +11,13 @@ on:
         required: true
 
 jobs:
-  triage:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/labeler@v4
-      with:
-        repo-token: ${{ secrets.token }}
-        configuration-path: ${{ inputs.config-path }}
+    check-bats-version:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+          - uses: actions/setup-node@v3
+            with:
+              node-version: '14'
+          - run: npm install -g bats
+          - run: bats -v
+    

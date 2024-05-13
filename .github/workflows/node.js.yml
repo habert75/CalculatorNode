@@ -49,6 +49,3 @@ jobs:
       #     publish_dir: ./dist
   call-workflow-passing-data:
     uses: ./.github/workflows/reusable.yml
-    with:
-        config-path: .github/caller.yml
-        secrets: inherit
