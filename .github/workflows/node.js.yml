@@ -47,3 +47,8 @@ jobs:
       #   with:
       #     github_token: ${{ secrets.CI_CD_TOKEN }}
       #     publish_dir: ./dist
+  call-workflow-passing-data:
+    uses: ./.github/workflows/reusable.yml
+    with:
+        config-path: .github/caller.yml
+        secrets: inherit
