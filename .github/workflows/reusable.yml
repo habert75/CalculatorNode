@@ -2,13 +2,13 @@ name: Reusable workflow example
 
 on:
   workflow_call:
-    inputs:
-      config-path:
-        required: true
-        type: string
-    secrets:
-      token:
-        required: true
+    # inputs:
+    #   config-path:
+    #     required: true
+    #     type: string
+    # secrets:
+    #   token:
+    #     required: true
 
 jobs:
     check-bats-version:
@@ -20,4 +20,3 @@ jobs:
               node-version: '14'
           - run: npm install -g bats
           - run: bats -v
-    
