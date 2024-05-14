@@ -2,18 +2,25 @@ name: Reusable workflow build
 
 on:
   workflow_call:
-    # inputs:
-    #   config-path:
-    #     required: true
-    #     type: string
-    # secrets:
-    #   token:
-    #     required: true
+    inputs:
+      config-path:
+        required: false
+        type: string
+      runsOn:
+        required: true
+        type: string
+      message:
+        required: true
+        type: string
+    secrets:
+      token:
+        required: false
 
 jobs:
     build:
 
-        runs-on: ubuntu-latest
+        # runs-on: ubuntu-latest
+        runs-on: ${{ inputs.runsOn }}
     
         strategy:
           matrix:
@@ -31,3 +38,4 @@ jobs:
         - run: npm run build --if-present
         - run: npm install jest
         - run: npm test
+        - run: echo ${{ inputs.message }}

@@ -12,6 +12,9 @@ on:
 jobs:
   call-workflow-build:
     uses: ./.github/workflows/reusable-build.yml
+    with:
+      runsOn: ubuntu-latest
+      message: message from caller!!!
   # build:
 
   #   runs-on: ubuntu-latest
