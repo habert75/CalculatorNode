@@ -20,7 +20,7 @@ on:
         required: false
 
 jobs:
-    jobsteps:
+    build:
 
         # runs-on: ubuntu-latest
         runs-on: ${{ inputs.runsOn }}
