@@ -45,11 +45,9 @@ jobs:
         - run: npm install jest
         - run: npm test
         - run: echo ${{ inputs.message }} 
-          if: ${{ inputs.jobType == 'build'}}
-        - run: echo "add steps specific to build stage"
-        - run: echo " jobType ${{ inputs.jobType }}"
+        - if: ${{ inputs.jobType == 'build'}}
+          run: echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }}" stage"
 
-          if: ${{ inputs.jobType == 'deploy'}}
-        - run: echo "Add steps specific to deploy stage"
-        - run: echo " jobType ${{ inputs.jobType }}"
+        - if: ${{ inputs.jobType == 'deploy'}}
+          run: echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }}" stage"
         
