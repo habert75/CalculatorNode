@@ -12,12 +12,15 @@ on:
       message:
         required: true
         type: string
+      jobName:
+        required: true
+        type: string
     secrets:
       token:
         required: false
 
 jobs:
-    build:
+    jobsteps:
 
         # runs-on: ubuntu-latest
         runs-on: ${{ inputs.runsOn }}
