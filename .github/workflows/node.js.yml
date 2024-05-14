@@ -16,7 +16,7 @@ jobs:
     with:
       runsOn: ubuntu-latest
       message: message from caller!!!!!
-      jobType: build
+      jobType: deploy
         #  - uses: ./.github/workflows/reusable-deploy.yml
   # build:2
 

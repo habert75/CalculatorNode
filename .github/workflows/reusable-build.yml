@@ -49,5 +49,6 @@ jobs:
           run: echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }} stage"
 
         - if: ${{ inputs.jobType == 'deploy'}}
-          run: echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }} stage"
+          run: echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }} stage";echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }} stage"
+          
         
