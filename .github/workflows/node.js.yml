@@ -16,8 +16,7 @@ jobs:
     with:
       runsOn: ubuntu-latest
       message: message from caller!!!!!
-   steps:
-    - run: echo "hello"
+      jobType: build
         #  - uses: ./.github/workflows/reusable-deploy.yml
   # build:2
 

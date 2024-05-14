@@ -15,6 +15,9 @@ on:
       jobName:
         required: false
         type: string
+      jobType:
+        required: true
+        type: string
     secrets:
       token:
         required: false
@@ -41,4 +44,10 @@ jobs:
         - run: npm run build --if-present
         - run: npm install jest
         - run: npm test
-        - run: echo ${{ inputs.message }}
+        - run: echo ${{ inputs.message }} 
+          if: ${{ inputs.jobType == 'build'}}
+        - run: echo "add steps specific to build stage""
+
+          if: ${{ inputs.jobType == 'deploy'}}
+        - run: echo "Add steps specific to deploy stage"
+        
