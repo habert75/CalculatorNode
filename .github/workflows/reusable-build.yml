@@ -21,7 +21,8 @@ on:
     secrets:
       token:
         required: false
-
+env:
+  env_var: ${{ vars.ENV_CONTEXT_VAR }}
 jobs:
     Job-steps:
 
@@ -49,6 +50,6 @@ jobs:
           run: echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }} stage"
 
         - if: ${{ inputs.jobType == 'deploy'}}
-          run: echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }} stage";echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }} stage"
+          run: echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }} stage";echo "jobType ${{ inputs.jobType }}.add steps specific to ${{ inputs.jobType }} stage ${{ vars.username }}"
           
         
