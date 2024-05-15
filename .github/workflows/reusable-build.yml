@@ -21,8 +21,8 @@ on:
     secrets:
       token:
         required: false
-env:
-  env_var: ${{ vars.ENV_CONTEXT_VAR }}
+# env:
+#   env_var: ${{ vars.ENV_CONTEXT_VAR }}
 jobs:
     Job-steps:
 
