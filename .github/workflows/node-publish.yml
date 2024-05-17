@@ -50,8 +50,8 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
         #   scope: '@octocat'
       - run: npm ci
-      - run: npm adduser
-      - run: npm login
+    #   - run: npm adduser
+    #   - run: npm login
       - run: whoami
 
       - run: npm publish
