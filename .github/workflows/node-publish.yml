@@ -25,9 +25,15 @@
 #           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 name: Publish package to GitHub Packages
+
 on:
-  release:
-    types: [published]
+    push:
+     branches: [ "main" ]
+    pull_request:
+     branches: [ "main" ]    
+# on:
+#   release:
+#     types: [published]
 jobs:
   build:
     runs-on: ubuntu-latest
